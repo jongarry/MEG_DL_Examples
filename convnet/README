@@ -1,9 +1,8 @@
-
-
+Scripts:
 
 - convnet_sensor.py
 
-Script for training CNNs using a 2D representation of the sensor data.
+Script for training CNNs using a 2D representation of the MEG sensor data.
 
 - submit_keras_gpu_job.sh
 
@@ -18,16 +17,12 @@ Directories:
 
 - /summaries
 
-Tensorboard summary files generated during training are stored for each network here.
+Tensorboard summary files generated during training are stored for each network here
 
 - /models
 
-Network architecture is stored here in a JSON file along with the optimal model weights stored in an HDF5 file.
+Network architectures are stored here in a JSON file along with the optimal model weights stored in HDF5 files
 
 - /datasets
 
 Directory or symlink to a location containing the datasets used for training
-
-- /analysis
-
-Collection of scripts for analysing trained networks
