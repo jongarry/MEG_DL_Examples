@@ -1,0 +1,11 @@
+These scripts make use of the MNE Python package in order to process MEG records from the Cam-CAN dataset for use with machine learning classifiers.
+
+The order of execution is as follows:
+
+1.) process_epochs.py
+
+Extracts epochs from fif files and processes them into active and baseline records. Theses records are stored in a file named processed_data.hdf5.
+
+2.) train_test_split.py
+
+Splits up processed dataset into training, validation, and testing subsets by randomly sampling based on participant

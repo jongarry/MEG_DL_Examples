@@ -1,0 +1,28 @@
+This repository contains scripts that demonstrate some of the tasks performed as a part of a project that investigated the application of Convolutional Neural Networks (CNNs) to magnetoencephalography (MEG) measurements. These measurements were recorded during the task of cued button pressing. 
+
+The scripts are divided up into the following directories:
+
+- /convnet:
+
+An example script, convnet_sensor.py demonstrates the usage of Keras (Tensorflow backend) for constructing and training a CNN with a simple architecture. Bash scripts for execution using GPUs on a computing cluster with a SLURM scheduler have also been included.
+
+
+- /data_processing:
+
+Two scripts are included here: process_epochs.py and train_test_split.py. The first script performs signal processing on each participant trial prior to splitting each trial up into active and baseline intervals. Signal processing is performed using the MNE Python package. The extracted intervals from each trial are saved to file as labelled records. The second script, train_test_split.py, splits up the collection of processed records into training, validation, and testing subsets. Random sampling is performed on the basis of participant.
+
+- /vgg_vis_demo:
+
+A simple script demonstrating visualisation techniques such as feature map plotting, activation maximisation, saliency mapping, and occlusion mapping. This script uses a VGG16 network with weights that were trained using the Imagenet dataset. An image of a cat is included for testing network classification and the various visualisation methods.
+
+
+NOTE: Due to dependency conflicts, two Anaconda Python virtual environments were configured in order to use MNE and Keras/Tensorflow respectively on the same system. The packages for each environment are listed in the following files:
+
+mne-packages.yml
+keras-packages.yml
+
+These environments can be created as follows:
+
+conda env create -f environment.yml
+
+Please see https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html for more details.

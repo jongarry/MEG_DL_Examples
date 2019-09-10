@@ -1,0 +1,33 @@
+
+
+
+- convnet_sensor.py
+
+Script for training CNNs using a 2D representation of the sensor data.
+
+- submit_keras_gpu_job.sh
+
+Shell script used to submit CNN training jobs on a Compute Canada cluster. This script specifically requests GPU resources.
+
+- submit_keras_gpu_array_job.sh
+
+Shell script used to submit CNN training jobs on the Compute Canada cluster. Submits an ensemble of jobs as defined by the --array=#-# line. Useful for gauging overall performance of a network architecture.
+
+
+Directories:
+
+- /summaries
+
+Tensorboard summary files generated during training are stored for each network here.
+
+- /models
+
+Network architecture is stored here in a JSON file along with the optimal model weights stored in an HDF5 file.
+
+- /datasets
+
+Directory or symlink to a location containing the datasets used for training
+
+- /analysis
+
+Collection of scripts for analysing trained networks
